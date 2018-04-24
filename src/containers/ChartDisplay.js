@@ -8,6 +8,12 @@ class ChartDisplay extends Component{
       chartsongs: [],
       currentSong: null
     };
+  };
+
+  componentDidMount(){
+  fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
+    .then(response => response.json())
+    .then(json => this.setState({chartsongs: json}));
   }
 
   render(){
