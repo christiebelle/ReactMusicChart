@@ -18,7 +18,10 @@ class ChartDisplay extends Component{
 
   render(){
     return(
-      console.log("hello!")
+      <div>
+        <h1>The UK Top 20 Chart</h1>
+        <SongSelector songs={this.state.chartsongs}/>
+      </div>
     );
   };
 
