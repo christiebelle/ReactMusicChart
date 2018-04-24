@@ -12,9 +12,9 @@ class ChartDisplay extends Component{
 
   render(){
     return(
-      console.log("hello!");
-    )
-  }
+      console.log("hello!")
+    );
+  };
 
 };
 
