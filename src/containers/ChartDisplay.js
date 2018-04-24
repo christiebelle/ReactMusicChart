@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import SongList from '../components/SongList'
 
 class ChartDisplay extends Component{
 
@@ -11,7 +12,7 @@ class ChartDisplay extends Component{
   };
 
   componentDidMount(){
-  fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
+    fetch("https://itunes.apple.com/gb/rss/topsongs/limit=20/json")
     .then(response => response.json())
     .then(json => this.setState({chartsongs: json}));
   }
@@ -20,7 +21,7 @@ class ChartDisplay extends Component{
     return(
       <div>
         <h1>The UK Top 20 Chart</h1>
-        <SongSelector songs={this.state.chartsongs}/>
+        <SongList songs={this.state.chartsongs}/>
       </div>
     );
   };
