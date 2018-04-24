@@ -21,7 +21,7 @@ class ChartDisplay extends Component{
     return(
       <div>
         <h1>The UK Top 20 Chart</h1>
-        <SongList songs={this.state.chartsongs}/>
+        <SongList chartsongs={this.state.chartsongs}/>
       </div>
     );
   };
